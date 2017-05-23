@@ -13,7 +13,7 @@
     </UserControl.DataContext>
     
     <Grid>
-        <Label x:Name="FilePathLabel" Content="Type:" HorizontalAlignment="Left" Margin="58,6,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="FilePathLabel" Content="Path:" HorizontalAlignment="Left" Margin="58,6,0,0" VerticalAlignment="Top" Width="108"/>
         <TextBox x:Name="FilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="204,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" 
                  Text="{Binding Path}"/>
         <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="204,75,0,0" VerticalAlignment="Top" Width="75" Height="23" Background="#0073b7" FontWeight="Bold"  Foreground="White"
