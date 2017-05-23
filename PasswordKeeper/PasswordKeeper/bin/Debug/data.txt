@@ -1,0 +1,26 @@
+[
+  {
+    "Type": 10,
+    "URL": "",
+    "Name": "Something",
+    "OperatingSystem": "Android",
+    "Accounts": [
+      {
+        "Username": "Asdf",
+        "Password": "aB:4;}R@"
+      }
+    ]
+  },
+  {
+    "Type": 15,
+    "URL": "",
+    "Name": "Something",
+    "OperatingSystem": "Android",
+    "Accounts": [
+      {
+        "Username": "Asdf",
+        "Password": "A51}L>[*"
+      }
+    ]
+  }
+]
