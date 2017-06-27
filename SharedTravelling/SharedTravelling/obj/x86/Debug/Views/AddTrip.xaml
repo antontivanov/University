@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="SharedTravelling.Views.AddTrip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SharedTravelling.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:SharedTravelling.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:AddTripViewModel></vm:AddTripViewModel>
+    </Page.DataContext>
+
+    <SplitView x:ConnectionId='1' x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="{Binding Open}" 
+               CompactPaneLength="50" OpenPaneLength="150">
+        <SplitView.Pane>
+            <StackPanel Background="Gray">
+                <Button x:ConnectionId='2' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent"
+                        Command="{Binding OpenMenu}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:ConnectionId='5' x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE721;"
+                    Width="50" Height="50" Background="Transparent"
+                            Command="{Binding Search}"/>
+                    <TextBlock Text="Search" FontSize="18" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:ConnectionId='4' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE805;"
+                        Width="50" Height="50" Background="Transparent"
+                            Command="{Binding AddTrip}"/>
+                    <TextBlock Text="Add Trip" FontSize="18" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:ConnectionId='3' x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE804;"
+                        Width="50" Height="50" Background="Transparent"
+                            Command="{Binding AddCar}"/>
+                    <TextBlock Text="Add Car" FontSize="18" VerticalAlignment="Center" />
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <TextBox x:ConnectionId='6' x:Name="brandTextBox" HorizontalAlignment="Left" Margin="148,71,0,0" TextWrapping="Wrap" Text="{Binding Time, Mode=TwoWay}" VerticalAlignment="Top" Width="135"/>
+                <TextBlock x:ConnectionId='7' x:Name="brand" HorizontalAlignment="Left" Margin="40,71,0,0" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top"/>
+
+                <TextBlock x:ConnectionId='8' x:Name="model" HorizontalAlignment="Left" Margin="40,129,0,0" TextWrapping="Wrap" Text="Seats" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='9' x:Name="modelTextBox" HorizontalAlignment="Left" Margin="148,129,0,0" TextWrapping="Wrap" Text="{Binding Seats, Mode=TwoWay}" VerticalAlignment="Top" Width="135"/>
+
+                <TextBlock x:ConnectionId='10' x:Name="color" HorizontalAlignment="Left" Margin="40,188,0,0" TextWrapping="Wrap" Text="Car" VerticalAlignment="Top"/>
+
+                <Button x:ConnectionId='11' x:Name="registerButton" Content="Add Trip" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="85,490,0,0" Width="120"
+                Background="#0073b7" FontWeight="Bold"  Foreground="White"
+                Command="{Binding AddTripAction}"/>
+                
+                <ComboBox x:ConnectionId='12' x:Name="comboBox" HorizontalAlignment="Left" Margin="148,183,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.504,0.062"
+                          ItemsSource="{Binding CarsToShow, Mode=TwoWay}"
+                          SelectedItem="{Binding Car, Mode=TwoWay}"/>
+
+                <TextBlock x:ConnectionId='13' x:Name="from" HorizontalAlignment="Left" Margin="37,245,0,0" TextWrapping="Wrap" Text="From" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='14' x:Name="fromTextBox" HorizontalAlignment="Left" Margin="148,245,0,0" TextWrapping="Wrap" Text="{Binding From, Mode=TwoWay}" VerticalAlignment="Top" Width="135"/>
+
+                <TextBlock x:ConnectionId='15' x:Name="to" HorizontalAlignment="Left" Margin="37,300,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='16' x:Name="toTextBox" HorizontalAlignment="Left" Margin="148,300,0,0" TextWrapping="Wrap" Text="{Binding To, Mode=TwoWay}" VerticalAlignment="Top" Width="135"/>
+
+                <CheckBox x:ConnectionId='17' x:Name="checkBox" Content="Smoking" HorizontalAlignment="Left" Margin="40,361,0,0" VerticalAlignment="Top"
+                          IsChecked="{Binding Smoking, Mode=TwoWay}"/>
+                <CheckBox x:ConnectionId='18' x:Name="checkBox1" Content="Drinking" HorizontalAlignment="Left" Margin="40,393,0,0" VerticalAlignment="Top"
+                          IsChecked="{Binding Drinking, Mode=TwoWay}"/>
+                <CheckBox x:ConnectionId='19' x:Name="checkBox2" Content="Eating" HorizontalAlignment="Left" Margin="40,425,0,0" VerticalAlignment="Top"
+                          IsChecked="{Binding Eating, Mode=TwoWay}"/>
+            </Grid>
+        </SplitView.Content>
+    </SplitView>
+</Page>
+

@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="SharedTravelling.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SharedTravelling"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:SharedTravelling.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:MainWindowViewModel></vm:MainWindowViewModel>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Username, Mode=TwoWay}" VerticalAlignment="Top" Margin="158,240,0,0" Width="155"/>
+        <TextBox x:Name="passwordTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" VerticalAlignment="Top" Margin="158,304,0,0" Width="155"/>
+        
+        <TextBlock x:Name="usernameLabel" HorizontalAlignment="Left" Margin="38,240,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="87" Height="32"/>
+        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="38,304,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="87" Height="32"/>
+        
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,431,0,0" Width="120"
+                Background="#0073b7" FontWeight="Bold"  Foreground="White"
+                Command="{Binding Login}"/>
+        <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,431,0,0" Width="120"
+                Background="#0073b7" FontWeight="Bold"  Foreground="White"
+                Command="{Binding Register}"/>
+
+    </Grid>
+</Page>

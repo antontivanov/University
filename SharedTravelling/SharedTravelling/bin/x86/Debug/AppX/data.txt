@@ -1,0 +1,58 @@
+[
+  {
+    "Username": "Goshko",
+    "Password": "goshko",
+    "DateOfBirth": "0001-01-01T00:00:00",
+    "Cars": [],
+    "Trips": [],
+    "Rating": 0.0
+  },
+  {
+    "Username": "goshko",
+    "Password": "12345678",
+    "DateOfBirth": "0001-01-01T00:00:00",
+    "Cars": [
+      {
+        "Brand": "addd",
+        "Model": "asdd",
+        "Color": "sadd",
+        "Year": "1234"
+      }
+    ],
+    "Trips": [
+      {
+        "Time": "19:32",
+        "NumberOfSeats": 4,
+        "Car": {
+          "Brand": "addd",
+          "Model": "asdd",
+          "Color": "sadd",
+          "Year": "1234"
+        },
+        "From": "Sofia",
+        "To": "Stara Zagora",
+        "Smoking": true,
+        "Eating": true,
+        "Drinking": false,
+        "Passengers": []
+      },
+      {
+        "Time": "19:23",
+        "NumberOfSeats": 3,
+        "Car": {
+          "Brand": "addd",
+          "Model": "asdd",
+          "Color": "sadd",
+          "Year": "1234"
+        },
+        "From": "Plovidv",
+        "To": "Sofia",
+        "Smoking": true,
+        "Eating": true,
+        "Drinking": false,
+        "Passengers": []
+      }
+    ],
+    "Rating": 0.0
+  }
+]
